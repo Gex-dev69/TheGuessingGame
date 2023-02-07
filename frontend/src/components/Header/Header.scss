@@ -1,3 +1,5 @@
+
+
 .header {
     margin: 0;
     color: #306135;
@@ -7,8 +9,24 @@
     overflow: hidden;
     overflow-y: hidden;
     h2 {
-      margin: 0;
-      padding: 0;
+      position: absolute;
+width: 620px;
+height: 137px;
+left: 520px;
+top: 20px;
+
+
+font-family: 'Rubik One';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 79px;
+display: flex;
+align-items: center;
+
+color: #306135;
+
+text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
     }
 }
 
@@ -18,6 +36,31 @@
 /* Auto layout */
   display: flex;
   flex-direction: row;
+  overflow: hidden;
+  overflow-y: hidden;
+  align-items: flex-start;
+  padding: 24px 68px;
+  gap: 10px;
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 329px;
+  height: 129px;
+  left: 16cm;
+  top: 10cm;
+  border: 10px solid #306135;
+  border-radius: 34px;
+}
+
+.btn:hover{
+  /* State=active */
+  overflow: hidden;
+  overflow-y: hidden;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+/* Auto layout */
+
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
   padding: 24px 68px;
   gap: 10px;
@@ -25,18 +68,44 @@
   position: absolute;
   width: 329px;
   height: 129px;
-  left: 20px;
-  top: 20px;
-  border: 10px solid #306135;
+  left: 16cm;
+  top: 10cm;
+
+  background: #306135;
+  box-shadow: -3px 5px 65px #737F91;
   border-radius: 34px;
+  .TextStyle{
+    overflow: hidden;
+    overflow-y: hidden;
+    width: 188px;
+    height: 79px;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 79px;
+    letter-spacing: 0.015em;
+
+    color: #7C8FAE;
+
+
+/* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
 }
 
-.btn:hover{
-  /* State=active */
+.btn:active{
+  /* State=click */
 
 
 /* Auto layout */
-
+overflow: hidden;
+overflow-y: hidden;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
@@ -44,18 +113,18 @@ padding: 24px 68px;
 gap: 10px;
 
 position: absolute;
-width: 329px;
+width: 324px;
 height: 129px;
-left: 20px;
-top: 20px;
-
-background: #306135;
-box-shadow: -3px 5px 65px #737F91;
+left: 16cm;
+top: 10cm;
+border: 10px solid #D12222;
+background: #D12222;
 border-radius: 34px;
   .TextStyle{
     width: 188px;
 height: 79px;
-
+overflow: hidden;
+overflow-y: hidden;
 font-family: 'Rubik One';
 font-style: normal;
 font-weight: 400;
@@ -63,7 +132,7 @@ font-size: 64px;
 line-height: 79px;
 letter-spacing: 0.015em;
 
-color: #7C8FAE;
+color: #D9D9D9;
 
 
 /* Inside auto layout */
@@ -73,7 +142,6 @@ order: 0;
 flex-grow: 0;
   }
 }
-
 .TextStyle{
   width: 188px;
   height: 79px;
@@ -84,13 +152,62 @@ flex-grow: 0;
   font-size: 64px;
   line-height: 79px;
   letter-spacing: 0.015em;
-
+  overflow: hidden;
+  overflow-y: hidden;
   color: #306135;
-
+  align-self: center;
 
 /* Inside auto layout */
 
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+
+.gif_player img {
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 10cm;
+  position: absolute;
+  left: 1px;
+  bottom: 0.0001cm;
+}
+
+.input_prt{
+  position: absolute;
+  width: 467px;
+  height: 59px;
+  left: 540px;
+  top: 255px;
+  box-sizing: border-box;
+
+  background-color:rgba(0, 0, 0, 0);
+  border: 5px solid #306135;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5.5px);
+/* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 22px;
+
+}
+.input_prt[type=text] {
+font-family: 'Rubik One';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 40px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+opacity: 0.4;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sound_ico{
+  position: absolute;
+  left: 1cm;
+  top: 1cm;
+  scale: 10px;
 }
