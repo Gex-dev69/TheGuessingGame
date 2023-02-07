@@ -1,0 +1,96 @@
+.header {
+    margin: 0;
+    color: #306135;
+    font-family: url(../../fonts/RubikOne-Regular.ttf);
+    font-size: 60px;
+    padding-bottom: 600px;
+    overflow: hidden;
+    overflow-y: hidden;
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+}
+
+.btn{
+    /* State=inactive */
+  box-sizing: border-box;
+/* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px 68px;
+  gap: 10px;
+
+  position: absolute;
+  width: 329px;
+  height: 129px;
+  left: 20px;
+  top: 20px;
+  border: 10px solid #306135;
+  border-radius: 34px;
+}
+
+.btn:hover{
+  /* State=active */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px 68px;
+gap: 10px;
+
+position: absolute;
+width: 329px;
+height: 129px;
+left: 20px;
+top: 20px;
+
+background: #306135;
+box-shadow: -3px 5px 65px #737F91;
+border-radius: 34px;
+  .TextStyle{
+    width: 188px;
+height: 79px;
+
+font-family: 'Rubik One';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 79px;
+letter-spacing: 0.015em;
+
+color: #7C8FAE;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+  }
+}
+
+.TextStyle{
+  width: 188px;
+  height: 79px;
+
+  font-family: 'Rubik One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  letter-spacing: 0.015em;
+
+  color: #306135;
+
+
+/* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
