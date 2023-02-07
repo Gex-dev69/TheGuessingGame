@@ -12,10 +12,11 @@ var GifPlayer = require('react-gif-player');
 const Header = () => (
   <div className="header">
     <h2>GUESS TO LIVE</h2>
-    <img src={temp_img_2} alt="look" className="sound_ico"></img>
-    <input type="text" id="playerName" className="input_prt" maxLength={10}></input>
+    <button className="sd"><img src={temp_img_2} alt="look" className="sound_ico"></img></button>
+    <input type="text" id="playerName" className="input_prt" placeholder="Player" maxLength={10}></input>
     <button className="btn"><text className="TextStyle">PLAY</text></button>
-    <GifPlayer   gif={temp_img} still={temp_img} />
+    <div className="players"><GifPlayer   gif={temp_img} still={temp_img} />
+    <GifPlayer   gif={temp_img} still={temp_img} /></div>
   </div>
 );
 

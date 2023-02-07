@@ -4,51 +4,58 @@
     margin: 0;
     color: #306135;
     font-family: url(../../fonts/RubikOne-Regular.ttf);
-    font-size: 60px;
-    padding-bottom: 600px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    height: 100%;
     overflow: hidden;
-    overflow-y: hidden;
-    h2 {
-      position: absolute;
-width: 620px;
-height: 137px;
-left: 520px;
-top: 20px;
-
-
-font-family: 'Rubik One';
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 79px;
-display: flex;
-align-items: center;
-
-color: #306135;
-
-text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
-    }
+    width: 100%;
+  
 }
+
+h2 {  
+      font-family: 'Rubik One';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+     line-height: 79px;
+    display: flex;
+    align-self: center;
+  
+    color: #306135;
+  
+    text-shadow: 2px 2px 2px rgba(145, 145, 145, 0.51);
+ }
 
 .btn{
     /* State=inactive */
   box-sizing: border-box;
 /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  overflow-y: hidden;
-  align-items: flex-start;
-  padding: 24px 68px;
-  gap: 10px;
   background-color:rgba(0, 0, 0, 0);
-  position: absolute;
   width: 329px;
   height: 129px;
-  left: 16cm;
-  top: 10cm;
+  .TextStyle{
+    overflow: hidden;
+    overflow-y: hidden;
+    width: 188px;
+    height: 79px;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 79px;
+    letter-spacing: 0.015em;
+  }
+    color: #7C8FAE;
   border: 10px solid #306135;
   border-radius: 34px;
+  align-self: center;
 }
 
 .btn:hover{
@@ -59,17 +66,9 @@ text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
   transition-timing-function: ease-in-out;
 /* Auto layout */
 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 24px 68px;
-  gap: 10px;
-
-  position: absolute;
   width: 329px;
   height: 129px;
-  left: 16cm;
-  top: 10cm;
+  
 
   background: #306135;
   box-shadow: -3px 5px 65px #737F91;
@@ -104,50 +103,41 @@ text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
 
 
 /* Auto layout */
-overflow: hidden;
-overflow-y: hidden;
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 24px 68px;
-gap: 10px;
 
-position: absolute;
+
 width: 324px;
 height: 129px;
-left: 16cm;
-top: 10cm;
-border: 10px solid #D12222;
-background: #D12222;
+
+border: 10px solid #306135;
+background: #306135;
 border-radius: 34px;
   .TextStyle{
     width: 188px;
-height: 79px;
-overflow: hidden;
-overflow-y: hidden;
-font-family: 'Rubik One';
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 79px;
-letter-spacing: 0.015em;
+    height: 79px;
+    overflow: hidden;
+    overflow-y: hidden;
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 79px;
+    letter-spacing: 0.015em;
+      
+    color: #D9D9D9;
 
-color: #D9D9D9;
 
+    /* Inside auto layout */
 
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
   }
 }
 .TextStyle{
   width: 188px;
   height: 79px;
 
-  font-family: 'Rubik One';
-  font-style: normal;
+  font-family: 'challa';
   font-weight: 400;
   font-size: 64px;
   line-height: 79px;
@@ -168,23 +158,23 @@ flex-grow: 0;
   overflow: hidden;
   overflow-y: hidden;
   width: 10cm;
-  position: absolute;
-  left: 1px;
-  bottom: 0.0001cm;
+  margin-top: -15px;
+}
+
+.players {
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .input_prt{
-  position: absolute;
   width: 467px;
   height: 59px;
-  left: 540px;
-  top: 255px;
+  align-self: center;
   box-sizing: border-box;
-
   background-color:rgba(0, 0, 0, 0);
-  border: 5px solid #306135;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5.5px);
+  border: 6px solid #38793e;
+  box-shadow: 4px 4px 4px rgba(48, 92, 54, 0.753);
 /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 22px;
@@ -198,6 +188,7 @@ font-size: 32px;
 line-height: 40px;
 display: flex;
 align-items: center;
+align-self: center;
 
 color: #FFFFFF;
 
@@ -209,5 +200,42 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
   left: 1cm;
   top: 1cm;
-  scale: 10px;
+  height: 100%;
+  scale: 5px;
+  width: 50px;
+  object-fit: cover;
+  object-position: 5px;
+}
+
+.sound_ico:hover{
+  position: absolute;
+  left: 1cm;
+  top: 1cm;
+  height: 100%;
+  scale: 5px;
+  width: 95px;
+}
+
+  .sd{
+    position: absolute;
+    left: 1cm;
+    top: 1cm;
+    height: 80px;
+    scale: 5px;
+    background-color: transparent;
+    border: none;
+}
+.sd:hover{
+  position: absolute;
+  left: 0.9cm;
+  top: 0.9cm;
+  height: 90px;
+  scale: 5px;
+}
+.sd:active{
+  position: absolute;
+  left: 0.9cm;
+  top: 0.9cm;
+  height: 90px;
+  scale: 5px;
 }
