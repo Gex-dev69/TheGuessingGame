@@ -7,7 +7,7 @@ import {
   Routes, //replaces "Switch" used till v5
   Route,
 } from "react-router-dom";
-
+import ChatHistory from './components/Chat_history/ChatHistory';
 
 
 
@@ -17,6 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header"> 
         <BrowserRouter> 
+          <ChatHistory/>
           <Routes>
             <Route path='/' elemenent={<Header/>}/> 
           </Routes>
