@@ -1,11 +1,23 @@
 .ChatHistory {
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 20px;
-    padding-right: 40cm;
+  margin: 0;
+  color: #306135;
+  font-family: url(../../fonts/RubikOne-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
     h2 {
       margin: 0;
       padding: 0;
-      font-size: 6vh;
+      font-size: 64px;
+    }
+    .chatBody{
+      height: 670px;
     }
   }
