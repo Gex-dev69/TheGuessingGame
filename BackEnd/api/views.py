@@ -36,16 +36,13 @@ def set_name(request, pk):
 	
 @api_view(['GET'])
 def returnData(request):
-
     return JsonResponse({'data': list(gameModel.objects.values())})
     
 
 @api_view(['GET'])
-def mf(request):
-    gg = gameModel()
-    gg.player_name = "Gex"
-    gg.save() 
-    return Response(gameModel.objects.get(id=1).player_name)
+def getname(request):
+	gg = gameModel.objects.get(id=1)
+	return Response(gg.player_name)
 	
 
 

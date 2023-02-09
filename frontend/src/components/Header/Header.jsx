@@ -29,7 +29,7 @@ const Header=()=>{
   const mothertucker = event =>{
     console.log(message)
     fetch(`http://127.0.0.1:8000/setname/${message}`).then(Response => console.log(Response.status))
-    navigate('/test')
+    navigate('/charSel')
   }
   
   return(

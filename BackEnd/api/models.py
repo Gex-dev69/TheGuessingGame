@@ -6,7 +6,7 @@ class Game(models.Model):
   attempts_left = models.IntegerField(default=7)
   Selected_word = models.TextField(default="random")
   word_progress = models.TextField(default="set_progress")
-  
+    
 
   def __str__(self):
     return self.player_name
