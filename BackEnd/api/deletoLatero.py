@@ -13,6 +13,8 @@ while True:
         print("Test")
     elif tempo == "reset":
         sendoRequ("reset")
+    elif tempo == "call":
+        sendoRequ("callmedaddy")
 
             
     

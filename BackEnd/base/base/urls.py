@@ -23,5 +23,7 @@ urlpatterns = [
     path("test/", views.returnData, name="Test Out"),
     path("setname/<str:pk>", views.set_name, name="Name Setter"),
     path("getName",views.getname, name="returns data"),
-    path("reset",views.reset_settings, name="Reset Database")
+    path("reset",views.reset_settings, name="Reset Database"),
+    path("callmedaddy",views.showDaddy, name= 'daddy is here'),
+    path("tryMe",views.attempt_me,name="ME ME")
 ]

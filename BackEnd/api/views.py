@@ -8,17 +8,18 @@ from api.models import actualGame
 
 # Create your views here.
 
+
 @api_view(['GET'])
 def apiOverview(request):
-	api_urls = {
-		'List': '/task-list/',
-		'Detail View': '/task-detail/<str:pk>/',
-		'Create': '/task-create/',
-		'Update': '/task-update/<str:pk>/',
-		'Delete': '/task-delete/<str:pk>/',
-		}
+    api_urls = {
+        'List': '/task-list/',
+        'Detail View': '/task-detail/<str:pk>/',
+        'Create': '/task-create/',
+        'Update': '/task-update/<str:pk>/',
+        'Delete': '/task-delete/<str:pk>/',
+    }
 
-	return Response(api_urls)
+    return Response(api_urls)
 
 
 @api_view(['GET'])
@@ -29,39 +30,50 @@ def addName(request):
 
 @api_view(['GET'])
 def set_name(request, pk):
-	new = gameModel.objects.get(id=1)
-	new.player_name = pk
-	new.save()
-	return JsonResponse({'data': list(gameModel.objects.values())})
-	
+    new = gameModel.objects.get(id=1)
+    new.player_name = pk
+    new.save()
+    return JsonResponse({'data': list(gameModel.objects.values())})
+
+
 @api_view(['GET'])
 def returnData(request):
     return JsonResponse({'data': list(gameModel.objects.values())})
-    
+
 
 @api_view(['GET'])
 def getname(request):
-	gg = gameModel.objects.get(id=1)
-	return Response(gg.player_name)
+    gg = gameModel.objects.get(id=1)
+    return Response(gg.player_name)
+
 
 @api_view(['GET'])
 def reset_settings(request):
-	gameData = actualGame.objects.get(id=1)
-	gameData.attempts_left = 7
-	gameData.word_length = 0
-	gameData.attemptDone = False
-	gameData.save()
-	return Response(Response.status_code)
+    gameData = actualGame.objects.get(id=1)
+    gameData.attempts_left = 7
+    gameData.word_length = len(gameData.selected_word)
+    gameData.attemptDone = False
+    gameData.save()
+    return Response(Response.status_code)
 
 
-	
 @api_view(['GET'])
 def showDaddy(request):
-	gameData = actualGame.objects.get(id=1)
-	print(gameData)
-	return Response(Response.status_code)
+    gameData = actualGame.objects.get(id=1)
+    print(gameData.selected_word)
+    return Response(Response.status_code)
 
 
+def index_Finder(charc):
+    return [i for i, ltr in enumerate(actualGame.objects.get(id=1).selected_word) if ltr in charc]
 
 
-
+@api_view(['POST'])
+def attempt_me(requests):
+    if len(index_Finder(requests.data)) == 0:
+        actualGame.objects.get(id=1).attempts_left - 1
+        actualGame.objects.get(id=1).attempts_left
+        print(f"Wrong!!")
+    actualGame.save()
+    # Show user on frontend
+    return Response(Response.status_code)
