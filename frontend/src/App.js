@@ -9,7 +9,7 @@ import ChatHistory from './components/Chat_history/ChatHistory';
 import Header from './components/Header/Header';
 import Mainpage from './indexs/Mainpage';
 //import Charholder from './components/charHolder';
-
+  
 function App() {
   return (
     <div className="App">
