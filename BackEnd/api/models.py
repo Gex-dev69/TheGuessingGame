@@ -3,10 +3,20 @@ from django.db import models
 # Create your models here.
 class Game(models.Model):
   player_name = models.TextField(max_length=10)
-  attempts_left = models.IntegerField(default=7)
-  Selected_word = models.TextField(default="random")
-  word_progress = models.TextField(default="set_progress")
+  
+
     
 
   def __str__(self):
     return self.player_name
+
+class actualGame(models.Model):
+  selected_word = models.TextField()
+  attempts_left = models.IntegerField(default=7)
+  word_length = models.IntegerField(default=0)
+  attemptDone = models.BooleanField(default=False)
+  
+
+
+  def __str__(self):
+    return self.word_length

@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import ChatHistory from './components/Chat_history/ChatHistory';
 import Header from './components/Header/Header';
-
+import Mainpage from './indexs/Mainpage';
+//import Charholder from './components/charHolder';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path='charSel/' element={<ChatHistory/>}/>
             <Route path='/' element={<Header/>}/> 
+            <Route path='/game' element={<Mainpage/>}/>
           </Routes>
         </BrowserRouter>
       </header>

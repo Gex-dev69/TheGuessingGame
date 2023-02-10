@@ -1,3 +1,11 @@
+:root{
+  overflow: hidden;
+}
+.gridbb{
+  position: absolute;
+  left: 5cm;
+  top: 8cm;
+}
 .text_style{
   overflow: hidden;
   overflow-y: hidden;
@@ -5,8 +13,7 @@
   width: 214px;
   height: 63px;
   top: 0.8cm;
-  left: 44cm;
-
+  left: 32cm;
   font-family: 'Rubik One';
   font-style: normal;
   font-weight: 400;
@@ -20,6 +27,20 @@
 
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
 }
+.backbtn{
+  box-sizing: border-box;
+/* Auto layout */
+  background-color:rgba(0, 0, 0, 0);
+  position: absolute;
+  left: 0.0001cm;
+  width: 329px;
+  height: 129px;
+  align-self: center;
+  border-color: rgba(0, 0, 0, 0);;
+}
+.backbtn:hover{
+  
+}
 .ChatHistory {
     align-content: center;
     h2 {
@@ -28,7 +49,6 @@
       height: 112px;
       left: 495px;
       top: 15px;
-
       font-family: 'Rubik One';
       font-style: normal;
       font-weight: 400;
@@ -42,6 +62,9 @@
       text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
     }
     .chatBody{
-      height: 670px;
+      height: 100vh;
+      width: 100vh;
+      overflow: hidden;
+      overflow-y: hidden;
     }
   }

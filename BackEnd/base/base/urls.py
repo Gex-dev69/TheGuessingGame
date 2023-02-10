@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/',views.apiOverview,name="Api Over view"),
     path("test/", views.returnData, name="Test Out"),
     path("setname/<str:pk>", views.set_name, name="Name Setter"),
-    path("getName/",views.getname, name="returns data")
+    path("getName",views.getname, name="returns data"),
+    path("reset",views.reset_settings, name="Reset Database")
 ]
