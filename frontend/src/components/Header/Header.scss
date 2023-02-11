@@ -24,10 +24,18 @@ h2 {
      line-height: 79px;
     display: flex;
     align-self: center;
-  
+    border-width: 2px;
+    border: black;
     color: #306135;
-  
-    text-shadow: 2px 2px 2px rgba(145, 145, 145, 0.51);
+    text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
  }
 
 .btn{
@@ -153,12 +161,26 @@ border-radius: 34px;
   flex-grow: 0;
 }
 
-.gif_player img {
+img {
   overflow: hidden;
   overflow-y: hidden;
   width: 10cm;
   margin-top: -15px;
 }
+.kni{
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 10cm;
+  margin-top: -15px;
+}
+
+.skel{
+  overflow: hidden;
+  width: 3cm;
+  margin-top: 85px;
+  margin-right: 120px;
+}
+
 
 .players {
   display: flex;
