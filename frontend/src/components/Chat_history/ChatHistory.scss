@@ -1,70 +1,114 @@
 :root{
   overflow: hidden;
+  user-select:none;
+  
 }
-.gridbb{
-  position: absolute;
-  left: 5cm;
-  top: 8cm;
-}
-.text_style{
-  overflow: hidden;
-  overflow-y: hidden;
-  position: absolute;
-  width: 214px;
-  height: 63px;
-  top: 0.8cm;
-  left: 32cm;
+
+h2 {  
   font-family: 'Rubik One';
   font-style: normal;
   font-weight: 400;
-  font-size: 48px;
-  line-height: 59px;
+  font-size: 64px;
+  line-height: 79px;
   display: flex;
-  align-items: center;
+  justify-content: center;
 
-  color: #614930;
+  color: #306135;
 
-
-  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
+  text-shadow: 2px 2px 2px rgba(145, 145, 145, 0.51);
 }
-.backbtn{
+
+
+.ChatHistory{
+  height: 790px;
+  width: 100%;
+  justify-content: center;
+}
+
+.selbtn{
+  /* Auto layout */
   box-sizing: border-box;
-/* Auto layout */
-  background-color:rgba(0, 0, 0, 0);
-  position: absolute;
-  left: 0.0001cm;
-  width: 329px;
-  height: 129px;
-  align-self: center;
-  border-color: rgba(0, 0, 0, 0);;
-}
-.backbtn:hover{
-  
-}
-.ChatHistory {
-    align-content: center;
-    h2 {
-      position: absolute;
-      width: 781px;
-      height: 112px;
-      left: 495px;
-      top: 15px;
-      font-family: 'Rubik One';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 48px;
-      line-height: 59px;
-      display: flex;
-      align-items: center;
+  width: 4cm;
+  height: 4cm;
+  background: #D9D9D9;
+  border: 5px solid #315F37;
+  box-shadow: -5px 5px 6px rgba(92, 109, 135, 0.5), inset -9px 10px 17px rgba(0, 0, 0, 0.85);
+  border-radius: 20px;
+  overflow: hidden;
 
-      color: #306135;
+}
 
-      text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
-    }
-    .chatBody{
-      height: 100vh;
-      width: 100vh;
-      overflow: hidden;
-      overflow-y: hidden;
-    }
-  }
+.selbtn:hover{
+  box-shadow: -3px 0px 20px rgba(133, 153, 182, 0.863), inset -4px 5px 17px rgba(0, 0, 0, 0.85);
+  background: #c9dbe9;
+}
+
+.tempo1{
+
+  position: relative;
+  max-width: 300px;
+  margin-left:-85px; 
+  top: -37px;
+  overflow: hidden;
+}
+
+.tempo1:hover{
+  transform:scale(1.2) ;
+  overflow: hidden;
+
+}
+
+
+.tempo2{
+
+  position: relative;
+  max-width: 110px;
+  margin-left:28px; 
+  top: 10px;
+  overflow: hidden;
+}
+
+.tempo2:hover{
+
+  transform:scale(1.15) ;
+}
+
+
+.tempo3{
+
+  position: relative;
+  max-width: 150px;
+  margin-left:10px; 
+  top: -10px;
+  overflow: hidden;
+}
+
+.tempo3:hover{
+
+  transform:scale(1.15) ;
+}
+
+.tempo4{
+
+  position: relative;
+  max-width: 310px;
+  margin-left:-79px; 
+  top: -64px;
+  overflow: hidden;
+}
+
+.tempo4:hover{
+  top: -74px;
+  transform:scale(1.15) ;
+}
+
+.con{
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: space-between;
+  padding-top: 150px;
+
+
+}
+

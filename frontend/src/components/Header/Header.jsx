@@ -3,6 +3,7 @@ import "./Header.scss";
 import temp_img from "../../assets/__Idle.gif";
 import temp_img_2 from "../../assets/playBtn.png";
 import { useNavigate } from "react-router-dom";
+import temp_img3 from "../../assets/flip_skel.gif"
 //import temp_img_2 from '../../assets/flip_skel.gif';
 
 //var ReactDOM = require('react-dom');
@@ -53,8 +54,8 @@ const Header = () => {
         <text className="TextStyle">PLAY</text>
       </button>
       <div className="players">
-        <GifPlayer gif={temp_img} still={temp_img} />
-        <GifPlayer gif={temp_img} still={temp_img} />
+        <GifPlayer className="kni" gif={temp_img} still={temp_img} />
+        <GifPlayer className="skel" gif={temp_img3} still={temp_img3} />
       </div>
     </div>
   );

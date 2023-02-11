@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import "./ChatHistory.scss";
-import Grid from "@mui/material/Grid"; // Grid version 1
-import Charholder from "../charHolder";
+
+
+import temp_img from "../../assets/fontys.gif"
+import temp_img2 from "../../assets/idle.gif"
+import temp_img3 from "../../assets/idle2.gif"
+import temp_img4 from "../../assets/__Idle.gif"
+var GifPlayer = require("react-gif-player");
+
 
 //import backbtnimg from '../../assets/leftArrowInactive.png';//https://icons8.com/icons/set/back
 
@@ -30,20 +36,29 @@ class ChatHistory extends Component {
         <h2 onClick={get_name()}>SELECT CHARACTER</h2>
         <div className="chatBody">
           <text className="text_style" id="playerName"></text>
-          <Grid className="gridbb" container spacing={1}>
-            <Grid items xs={0} md={0}>
-                <Charholder/>
-            </Grid>
-            <Grid items xs={3} md={0}>
-                <Charholder/>
-            </Grid>
-            <Grid items xs={3} md={0}>
-                <Charholder/>
-            </Grid>
-            <Grid items xs={3} md={0}>
-                <Charholder/>
-            </Grid>
-          </Grid>
+          <div className="con">
+            <button className="selbtn">
+              <div >
+              <GifPlayer  className="tempo1" draggable="false" gif={temp_img} still={temp_img} />
+              </div>
+            </button>
+            <button className="selbtn">
+              <div>
+              <GifPlayer className="tempo2"  draggable="false" gif={temp_img2} still={temp_img2} />
+              </div>
+            </button>
+            <button className="selbtn">
+              <div >
+                <GifPlayer className="tempo3" draggable="false" gif={temp_img3} still={temp_img3} />
+              </div>
+            </button>
+            <button className="selbtn">
+              <div >
+              <GifPlayer className="tempo4" draggable="false" gif={temp_img4} still={temp_img4} />
+              </div>
+            </button>
+          </div>
+  
         </div>
       </div>
     );
