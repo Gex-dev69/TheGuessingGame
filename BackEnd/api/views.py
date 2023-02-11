@@ -68,12 +68,13 @@ def index_Finder(charc):
     return [i for i, ltr in enumerate(actualGame.objects.get(id=1).selected_word) if ltr in charc]
 
 
-@api_view(['POST'])
-def attempt_me(requests):
-    if len(index_Finder(requests.data)) == 0:
-        actualGame.objects.get(id=1).attempts_left - 1
-        actualGame.objects.get(id=1).attempts_left
+@api_view(['GET'])
+def attempt_me(requests,pk):
+    gameData = actualGame.objects.get(id=1)
+    if len(index_Finder(pk)) == 0:
+        gameData.attempts_left=gameData.attempts_left - 1 
         print(f"Wrong!!")
-    actualGame.save()
+    gameData.save()
+    print(gameData.attempts_left)
     # Show user on frontend
     return Response(Response.status_code)

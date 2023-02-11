@@ -25,5 +25,5 @@ urlpatterns = [
     path("getName",views.getname, name="returns data"),
     path("reset",views.reset_settings, name="Reset Database"),
     path("callmedaddy",views.showDaddy, name= 'daddy is here'),
-    path("tryMe",views.attempt_me,name="ME ME")
+    path("tryMe/<str:pk>",views.attempt_me,name="ME ME")
 ]
