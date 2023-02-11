@@ -53,6 +53,7 @@ def reset_settings(request):
     gameData.attempts_left = 7
     gameData.word_length = len(gameData.selected_word)
     gameData.attemptDone = False
+    gameData.subject = "*"*gameData.word_length
     gameData.save()
     return Response(Response.status_code)
 
@@ -64,17 +65,44 @@ def showDaddy(request):
     return Response(Response.status_code)
 
 
+
+@api_view(['GET'])
+def attempt_left(request):
+    print(actualGame.objects.get(id=1).attempts_left)
+    return Response(actualGame.objects.get(id=1).attempts_left)
+
+@api_view(['GET'])
+def getWord(request):
+    print(actualGame.objects.get(id=1).attempts_left)
+    return Response(actualGame.objects.get(id=1).subject)
+
+
+
 def index_Finder(charc):
     return [i for i, ltr in enumerate(actualGame.objects.get(id=1).selected_word) if ltr in charc]
 
-
 @api_view(['GET'])
-def attempt_me(requests,pk):
+def attempt_me(requests, pk):
     gameData = actualGame.objects.get(id=1)
-    if len(index_Finder(pk)) == 0:
+    SubjectList = list(gameData.subject)
+    GameState = ""
+    if len(index_Finder(pk)) <= 0:
         gameData.attempts_left=gameData.attempts_left - 1 
         print(f"Wrong!!")
+    if gameData.attempts_left <= 0:
+        print("GAME LOST!!!!")
+        GameState = "LOST"
+        gameData.attemptDone = True
+    else:
+        for x in index_Finder(pk):
+            SubjectList[x] = pk
+        gameData.subject = "".join(SubjectList)
+    if "*" not in SubjectList:
+        print("You Won")
+        GameState = "WON"
+    gameData.subject = "".join(SubjectList)
     gameData.save()
     print(gameData.attempts_left)
+    print(gameData.subject)
     # Show user on frontend
-    return Response(Response.status_code)
+    return Response(GameState)

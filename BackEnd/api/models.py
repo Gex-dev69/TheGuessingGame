@@ -15,8 +15,6 @@ class actualGame(models.Model):
   attempts_left = models.IntegerField(default=7)
   word_length = models.IntegerField(default=0)
   attemptDone = models.BooleanField(default=False)
-  
-
-
+  subject = models.TextField()
   def __str__(self):
     return self.word_length

@@ -12,11 +12,12 @@ print(len(the_word[0]))
 subject = "*"*len(the_word[0])
 
 SubjectList = list(subject)
+print(SubjectList)
 
 def index_Finder(charc,word):
     return [i for i, ltr in enumerate(word) if ltr in charc]
 
-
+print(index_Finder("e",the_word[0]))
 print( "*"*len(the_word[0]))
 while True:
     test = input("GIVE ME? ")

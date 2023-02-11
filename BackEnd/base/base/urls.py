@@ -25,5 +25,7 @@ urlpatterns = [
     path("getName",views.getname, name="returns data"),
     path("reset",views.reset_settings, name="Reset Database"),
     path("callmedaddy",views.showDaddy, name= 'daddy is here'),
-    path("tryMe/<str:pk>",views.attempt_me,name="ME ME")
+    path("tryMe/<str:pk>",views.attempt_me,name="attempt input"),
+    path("attempts",views.attempt_left,name="Attempts left"),
+    path("getWord",views.getWord,name="Selected random word")
 ]
