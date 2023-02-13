@@ -13,7 +13,7 @@ var GifPlayer = require("react-gif-player");
 
 function get_name() {
   const Http = new XMLHttpRequest();
-  const url = "http://127.0.0.1:8000/getName";
+  const url = "http://127.0.0.1:8000/getplayerName";
   Http.open("GET", url)
   Http.send();
 
@@ -33,9 +33,9 @@ class ChatHistory extends Component {
   render() {
     return (
       <div className="ChatHistory">
+        <text className="text_style" id="playerName">PLAYER</text>
         <h2 onClick={get_name()}>SELECT CHARACTER</h2>
         <div className="chatBody">
-          <text className="text_style" id="playerName"></text>
           <div className="con">
             <button className="selbtn">
               <div >

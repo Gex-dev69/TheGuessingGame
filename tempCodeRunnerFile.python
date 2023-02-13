@@ -1,1 +1,9 @@
-print("hello world")
+randomList = list("random")
+
+
+while True:
+    letter = input("Select a letter: ")
+    if letter.lower() in randomList:
+        print("That's in the list")
+    else:
+        print("Try again")

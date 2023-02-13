@@ -18,7 +18,22 @@ h2 {
   text-shadow: 2px 2px 2px rgba(145, 145, 145, 0.51);
 }
 
+.text_style{
+  font-family: 'Rubik One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+  height: 1cm;
+  width: 5cm;
+  padding-top: 1cm;
+  display: flex;
+  align-items: center;
+  margin-left: 35cm;
+  color: #614930;
 
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
+}
 .ChatHistory{
   height: 790px;
   width: 100%;

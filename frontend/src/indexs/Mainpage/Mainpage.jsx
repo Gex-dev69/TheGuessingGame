@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Mainpage.scss";
+import Pin from "../../components/keyboard/Keyboard";
 
 function sendInput() {
   let letterInput = document.getElementById("myG").value; // Get inputvalue
@@ -34,7 +35,7 @@ function sendInput() {
   //console.log("here"+holder);
 }
 
-function get_selectedWord(){
+function get_selectedWord() {
   const Http = new XMLHttpRequest();
   const url = `http://127.0.0.1:8000/getWord`;
   Http.open("GET", url);
@@ -45,15 +46,14 @@ function get_selectedWord(){
       Http.responseText.length - 1
     );
     console.log(filterName);
-    if(document.getElementById("selected_word").innerHTML != filterName){
+    if (document.getElementById("selected_word").innerHTML != filterName) {
       document.getElementById("selected_word").innerHTML = filterName;
     }
   };
 }
 
-
 function set_attempts() {
-  get_selectedWord()
+  get_selectedWord();
   const Http = new XMLHttpRequest();
   const url = `http://127.0.0.1:8000/attempts`;
   Http.open("GET", url);
@@ -64,7 +64,7 @@ function set_attempts() {
       Http.responseText.length - 1
     );
     console.log(filterName);
-    if(document.getElementById("attempts_left").innerHTML != filterName){
+    if (document.getElementById("attempts_left").innerHTML != filterName) {
       document.getElementById("attempts_left").innerHTML = filterName;
     }
   };
@@ -73,11 +73,15 @@ class Mainpage extends Component {
   render() {
     return (
       <div className="Main">
-        <text  id="attempts_left"></text>
+        <text className="player" id="playerName">
+          PLAYER
+        </text>
+        <Pin/>
+        <text id="attempts_left"></text>
         <text id="selected_word"></text>
         <input id="myG" type="text" className="inputSyle"></input>
         <button onClick={() => sendInput()} className="supBiggga">
-          CLICK ME WHORE
+          CLICK ME 
         </button>
       </div>
     );

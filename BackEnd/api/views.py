@@ -50,10 +50,13 @@ def getname(request):
 @api_view(['GET'])
 def reset_settings(request):
     gameData = actualGame.objects.get(id=1)
+    new = gameModel.objects.get(id=1)
     gameData.attempts_left = 7
     gameData.word_length = len(gameData.selected_word)
     gameData.attemptDone = False
     gameData.subject = "*"*gameData.word_length
+    new.player_name =""
+    new.save()
     gameData.save()
     return Response(Response.status_code)
 
@@ -73,7 +76,7 @@ def attempt_left(request):
 
 @api_view(['GET'])
 def getWord(request):
-    print(actualGame.objects.get(id=1).attempts_left)
+    print(actualGame.objects.get(id=1).subject)
     return Response(actualGame.objects.get(id=1).subject)
 
 
