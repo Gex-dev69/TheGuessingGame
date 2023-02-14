@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./ChatHistory.scss";
 
-
+import { useNavigate } from "react-router-dom";
 import temp_img from "../../assets/fontys.gif"
 import temp_img2 from "../../assets/idle.gif"
 import temp_img3 from "../../assets/idle2.gif"
@@ -25,44 +25,44 @@ function get_name() {
     );
     document.getElementById("playerName").innerHTML = filterName;
   };
-
   //console.log("here"+holder);
 }
 
-class ChatHistory extends Component {
-  render() {
-    return (
-      <div className="ChatHistory">
-        <text className="text_style" id="playerName">PLAYER</text>
-        <h2 onClick={get_name()}>SELECT CHARACTER</h2>
-        <div className="chatBody">
-          <div className="con">
-            <button className="selbtn">
-              <div >
-              <GifPlayer  className="tempo1" draggable="false" gif={temp_img} still={temp_img} />
-              </div>
-            </button>
-            <button className="selbtn">
-              <div>
-              <GifPlayer className="tempo2"  draggable="false" gif={temp_img2} still={temp_img2} />
-              </div>
-            </button>
-            <button className="selbtn">
-              <div >
-                <GifPlayer className="tempo3" draggable="false" gif={temp_img3} still={temp_img3} />
-              </div>
-            </button>
-            <button className="selbtn">
-              <div >
-              <GifPlayer className="tempo4" draggable="false" gif={temp_img4} still={temp_img4} />
-              </div>
-            </button>
-          </div>
-  
+
+const ChatHistory = () =>{
+  let navigate = useNavigate();
+  return (
+    <div className="ChatHistory">
+      <text className="text_style" id="playerName">PLAYER</text>
+      <h2 onClick={get_name()}>SELECT CHARACTER</h2>
+      <div className="chatBody">
+        <div className="con">
+          <button onClick={()=>{navigate('/game')}} className="selbtn">
+            <div >
+            <GifPlayer  className="tempo1" draggable="false" gif={temp_img} still={temp_img} />
+            </div>
+          </button>
+          <button className="selbtn">
+            <div>
+            <GifPlayer className="tempo2"  draggable="false" gif={temp_img2} still={temp_img2} />
+            </div>
+          </button>
+          <button className="selbtn">
+            <div >
+              <GifPlayer className="tempo3" draggable="false" gif={temp_img3} still={temp_img3} />
+            </div>
+          </button>
+          <button className="selbtn">
+            <div >
+            <GifPlayer className="tempo4" draggable="false" gif={temp_img4} still={temp_img4} />
+            </div>
+          </button>
         </div>
+
       </div>
-    );
-  }
+    </div>
+  );
 }
+
 
 export default ChatHistory;
