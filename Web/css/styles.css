@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  background-color: rgb(4, 0, 32);
+  background-image: url("../img/Background.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Rubik One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-self: center;
+  border-width: 2px;
+  border: black;
+  color: #306135;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 79px;
+  display: flex;
+  align-self: center;
+  border-width: 2px;
+  border: black;
+  color: #306135;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+}
