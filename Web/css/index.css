@@ -1,0 +1,228 @@
+.header {
+  margin: 0;
+  color: #306135;
+  font-family: url(../../fonts/RubikOne-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  background-color: rgb(4, 0, 32);
+  background-image: url("../img/Background.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  overflow: hidden;
+}
+
+h2 {
+  font-family: "Rubik One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-self: center;
+  border-width: 2px;
+  border: black;
+  color: #306135;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+}
+.btn {
+  /* State=inactive */
+  box-sizing: border-box;
+  /* Auto layout */
+  background-color: rgba(0, 0, 0, 0);
+  width: 329px;
+  height: 129px;
+  color: #7c8fae;
+  border: 10px solid #306135;
+  border-radius: 34px;
+  align-self: center;
+}
+.btn .TextStyle {
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 188px;
+  height: 79px;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+  font-family: "Rubik One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  letter-spacing: 0.015em;
+}
+.btn:hover {
+  /* State=active */
+  overflow: hidden;
+  overflow-y: hidden;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+  /* Auto layout */
+  width: 329px;
+  height: 129px;
+  background: #306135;
+  box-shadow: -3px 5px 65px #737f91;
+  border-radius: 34px;
+}
+.btn:hover .TextStyle {
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 188px;
+  height: 79px;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+  font-family: "Rubik One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  letter-spacing: 0.015em;
+  color: #7c8fae;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.btn:active {
+  /* State=click */
+  /* Auto layout */
+  width: 324px;
+  height: 129px;
+  border: 10px solid #306135;
+  background: #306135;
+  border-radius: 34px;
+}
+.btn:active .TextStyle {
+  width: 188px;
+  height: 79px;
+  overflow: hidden;
+  overflow-y: hidden;
+  font-family: "Rubik One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  letter-spacing: 0.015em;
+  color: #d9d9d9;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.TextStyle {
+  width: 188px;
+  height: 79px;
+  font-family: "challa";
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  letter-spacing: 0.015em;
+  overflow: hidden;
+  overflow-y: hidden;
+  color: #306135;
+  align-self: center;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+img {
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 10cm;
+  margin-top: -15px;
+}
+.kni {
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 10cm;
+  margin-top: -15px;
+}
+.skel {
+  overflow: hidden;
+  width: 3cm;
+  margin-top: 85px;
+  margin-right: 120px;
+}
+.players {
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  width: 467px;
+  height: 59px;
+  align-self: center;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  border: 6px solid #38793e;
+  box-shadow: 4px 4px 4px rgba(48, 92, 54, 0.753);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 22px;
+}
+input[type="text"] {
+  font-family: "Rubik One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  color: #fff;
+  opacity: 0.4;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sound_ico {
+  position: absolute;
+  left: 1cm;
+  top: 1cm;
+  height: 100%;
+  scale: 5px;
+  width: 50px;
+  object-fit: cover;
+  object-position: 5px;
+}
+.sound_ico:hover {
+  position: absolute;
+  left: 1cm;
+  top: 1cm;
+  height: 100%;
+  scale: 5px;
+  width: 95px;
+}
+.sd {
+  position: absolute;
+  left: 1cm;
+  top: 1cm;
+  height: 80px;
+  scale: 5px;
+  background-color: transparent;
+  border: none;
+}
+.sd:hover {
+  position: absolute;
+  left: 0.9cm;
+  top: 0.9cm;
+  height: 90px;
+  scale: 5px;
+}
+.sd:active {
+  position: absolute;
+  left: 0.9cm;
+  top: 0.9cm;
+  height: 90px;
+  scale: 5px;
+}

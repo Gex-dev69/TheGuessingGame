@@ -1,0 +1,115 @@
+:root {
+    overflow: hidden;
+    user-select: none;
+}
+h2 {
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 79px;
+    display: flex;
+    justify-content: center;
+    color: #306135;
+    text-shadow: 2px 2px 2px rgba(145, 145, 145, 0.51);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    background-color: rgb(4, 0, 32);
+    background-image: url("../img/Background.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+  
+.text_style {
+    font-family: 'Rubik One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    height: 1cm;
+    width: 5cm;
+    padding-top: 1cm;
+    display: flex;
+    align-items: center;
+    margin-left: 35cm;
+    color: #614930;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
+}
+.ChatHistory {
+    height: 790px;
+    width: 100%;
+    justify-content: center;
+}
+.selbtn {
+   /* Auto layout */
+    box-sizing: border-box;
+    width: 4cm;
+    height: 4cm;
+    background: #d9d9d9;
+    border: 5px solid #315f37;
+    box-shadow: -5px 5px 6px rgba(92, 109, 135, 0.5), inset -9px 10px 17px rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.selbtn:hover {
+    box-shadow: -3px 0px 20px rgba(133, 153, 182, 0.863), inset -4px 5px 17px rgba(0, 0, 0, 0.85);
+    background: #c9dbe9;
+}
+.tempo1 {
+    position: relative;
+    max-width: 300px;
+    margin-left: -85px;
+    top: -37px;
+    overflow: hidden;
+}
+.tempo1:hover {
+    transform: scale(1.2);
+    overflow: hidden;
+}
+.tempo2 {
+    transform: scale(2);
+    position: relative;
+    max-width: 110px;
+    margin-left: 28px;
+    top: 10px;
+    overflow: hidden;
+}
+.tempo2:hover {
+    transform: scale(1.15);
+}
+.tempo3 {
+    transform: scale(2);
+    position: relative;
+    max-width: 150px;
+    margin-left: 10px;
+    top: -10px;
+    overflow: hidden;
+}
+.tempo3:hover {
+    transform: scale(1.15);
+}
+.tempo4 {
+    transform: scale(2);
+    position: relative;
+    max-width: 310px;
+    margin-top: 50px;
+    margin-left: 20px;
+    top: -64px;
+    overflow: hidden;
+}
+.tempo4:hover {
+    top: -74px;
+    transform: scale(1.15);
+}
+.con {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+    padding-top: 150px;
+}

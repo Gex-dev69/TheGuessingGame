@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@font-face {
+    font-family: Rubik;
+    src: url("../fonts/RubikOne-Regular.ttf");
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -11,9 +15,8 @@ body {
 }
 
 h1 {
-  font-family: "Rubik One";
+  font-family: "Rubik";
   font-style: normal;
-  font-weight: 400;
   font-size: 64px;
   line-height: 79px;
   display: flex;
@@ -26,6 +29,7 @@ h1 {
 }
 
 p {
+    width: 100%;
   font-style: normal;
   font-weight: 400;
   font-size: 45px;
@@ -35,6 +39,21 @@ p {
   border-width: 2px;
   border: black;
   color: #306135;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+}
+
+footer {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 79px;
+  display: flex;
+  align-self: center;
+  border-width: 2px;
+  border: black;
+  color: #5b695c;
   text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
     1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
 }
