@@ -2,13 +2,13 @@
 <link rel="stylesheet" href="./css/charsel.css">
 <html>
     <div class="ChatHistory">
-        <text class="text_style" id="playerName">PLAYER</text>
+        <text class="text_style" id="myPlayer">PLAYER</text>
         <h2>SELECT CHARACTER</h2>
         <div class="chatBody">
           <div class="con">
             <button class="selbtn">
               <div >
-              <img  class="tempo1" draggable="false" src="./img/fontys.gif" />
+              <img  class="tempo1" draggable="false" src="./img/fontys.gif" onclick="characterSelecter(this)"/>
               </div>
             </button>
             <button class="selbtn">
@@ -30,4 +30,5 @@
         </div>
       </div>
 </html>
-<script src="./javascript/main.js"></script>
+<script src="./javascript/index.js"></script>
+<script src="./javascript/charsel.js"></script>

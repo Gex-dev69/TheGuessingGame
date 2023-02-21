@@ -5,6 +5,7 @@ import os
 def index_Finder(charc, word):
     return [i for i, ltr in enumerate(word) if ltr in charc]
 
+
 def main():
     
     random_words = ["random", "letter", "from", "list"]

@@ -11,7 +11,8 @@ h2 {
     display: flex;
     justify-content: center;
     color: #306135;
-    text-shadow: 2px 2px 2px rgba(145, 145, 145, 0.51);
+    text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
 }
 
 body {
@@ -36,7 +37,7 @@ body {
     padding-top: 1cm;
     display: flex;
     align-items: center;
-    margin-left: 35cm;
+    margin-left: 44cm;
     color: #614930;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
 }
@@ -80,7 +81,7 @@ body {
     overflow: hidden;
 }
 .tempo2:hover {
-    transform: scale(1.15);
+    transform: scale(2.5);
 }
 .tempo3 {
     transform: scale(2);
@@ -91,7 +92,7 @@ body {
     overflow: hidden;
 }
 .tempo3:hover {
-    transform: scale(1.15);
+    transform: scale(2.5);
 }
 .tempo4 {
     transform: scale(2);
@@ -104,7 +105,7 @@ body {
 }
 .tempo4:hover {
     top: -74px;
-    transform: scale(1.15);
+    transform: scale(2.5);
 }
 .con {
     display: flex;
