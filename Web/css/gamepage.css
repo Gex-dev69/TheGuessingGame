@@ -1,3 +1,8 @@
+:root{
+  overflow: hidden;
+  user-select:none;
+  
+}
 .Main {
   margin: 0;
   color: #306135;
@@ -18,7 +23,7 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 800px;
+  height: 7000px;
   background-color: rgb(4, 0, 32);
   background-image: url("../img/Background.png");
   background-size: contain;
