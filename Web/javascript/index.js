@@ -7,4 +7,8 @@ function onPlay(){
     window.location.assign("charseL.html");
 }
 
+function manual() {
+    window.location.assign("manual.html")
+}
+
 

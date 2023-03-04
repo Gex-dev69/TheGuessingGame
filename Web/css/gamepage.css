@@ -23,7 +23,6 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 7000px;
   background-color: rgb(4, 0, 32);
   background-image: url("../img/Background.png");
   background-size: contain;
@@ -50,23 +49,12 @@ body {
   color: #614930;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
 }
-.attempts {
-  position: relative;
-  width: 2cm;
-  left: 10cm;
-}
 .inputSyle {
   left: 10cm;
   top: 1cm;
   border-bottom: 1px dashed black;
   width: 10cm;
   letter-spacing: 0.45em;
-}
-.supBiggga {
-  position: absolute;
-  top: 3cm;
-  left: 10cm;
-  width: 2cm;
 }
 
 .container {
@@ -82,7 +70,7 @@ body {
   height: 500px;
   right: 60px;
   position: relative;
-  left: 38cm;
+  left: 28cm;
   bottom: 4.7cm;
 }
 
@@ -149,4 +137,17 @@ body {
 .orphans {
   background-color: transparent;
   border: none;
+}
+
+.attempts {
+  display: grid;
+  grid-template-columns: repeat(6, 55px);
+  position: absolute;
+  width: 5cm;
+  height: 1cm;
+  left: 4cm;
+  text-align: right;
+}
+.heartimg{
+  width: 2cm;
 }

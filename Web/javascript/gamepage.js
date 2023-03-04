@@ -6,21 +6,25 @@ window.onload = function () {
 
 }
 
-var chosenword;
 
 function getRandomWord() {
 
-    var g = ["Random", "abroad", "absent", "around","assets"]
+    var g = ["Random", "abroad", "absent", "around", "assets"]
     let f = Math.random() * 4;
     console.log(g[Math.round(f)])
     chosenword = g[Math.round(f)].split('')
 }
 getRandomWord()
-console.log(chosenword)
 
+//console.log(chosenword)
 
+var attempts = document.getElementById("livesCont");
 
+var liveLeft = 6;
+
+var cc = 0;
 function game(ltr) {
+    console.log("called");
     let counter = 0;
     let foundNone = true;
     let win = false;
@@ -35,6 +39,7 @@ function game(ltr) {
             document.getElementById("input" + x).innerHTML = ltr.toUpperCase();
         }
     });
+
     if (foundNone === true) {
         Swal.fire({
             showConfirmButton: false,
@@ -42,8 +47,40 @@ function game(ltr) {
             title: "MEH",
             icon: "warning",
         });
+        let lastindex = attempts.children.length - 1;
+        try {
+            attempts.children.item(lastindex).style.width = "3cm";
+        } catch (error) {
+
+        }
         setTimeout(function () {
+            try {
+                attempts.children.item(lastindex).remove();
+            } catch (error) {
+                console.log("Skip if none found");
+            }
+
             Swal.close();
+            liveLeft = liveLeft - 1;
+            console.log("Lives left is: " + liveLeft)
+            if (liveLeft === 0) {
+                console.log("You lost");
+                Swal.fire({
+                    title: 'YOU LOST, WANNA PLAY AGAIN?',
+                    showDenyButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: 'YES',
+                    denyButtonText: `NO`,
+                }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        location.reload();
+                    } else if (result.isDenied) {
+                        window.location.assign("index.html")
+                    }
+                });
+
+            }
         }, 500);
     } else {
         Swal.fire({
@@ -54,22 +91,34 @@ function game(ltr) {
         });
         setTimeout(function () {
             Swal.close();
+            cc++;
+            console.log("aye its me mario" + cc)
+            if (cc === 6) {
+                Swal.fire({
+                    title: 'YOU WON, WANNA PLAY AGAIN?',
+                    showDenyButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: 'YES',
+                    denyButtonText: `NO`,
+                }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        location.reload();
+                    } else if (result.isDenied) {
+                        window.location.assign("index.html")
+                    }
+                });
+            }
+           
         }, 500);
     }
-    let cc = 0
-    for(i = 0;i < 6;i++){
-        let x = i.toString();
-        if(document.getElementById("input" + x).innerHTML !== ""){
-            cc++
-        }
-         
-    }
-    if (cc === 6) {
-        alert("u won yay")
-    }
+
+
+
+
+
+
 }
-
-
 
 
 
