@@ -1,3 +1,3 @@
 # TheGuessingGame
 
-Simple Web Game.(School)
+Simple Web Game. (School Based)
