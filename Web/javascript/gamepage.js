@@ -36,6 +36,7 @@ var good = new Audio('./sound/good.wav');
 var hit = new Audio('./sound/hit.wav');
 var won = new Audio('./sound/won.wav');
 var lose = new Audio('./sound/lose.wav');
+var meh = new Audio('./sound/meh.wav');
 
 function game(ltr) {
     console.log("called");
@@ -62,7 +63,7 @@ function game(ltr) {
             icon: "warning",
         });
         Controller('attack')
-        
+        meh.play()
         let lastindex = attempts.children.length - 1;
         try {
             attempts.children.item(lastindex).style.width = "3cm";
@@ -84,6 +85,7 @@ function game(ltr) {
                 document.getElementById("background_audio").muted = true;
                 Controller('dead')
                 lose.play()
+                document.getElementById("you").src = "./img/Char_1/hit.gif";
                 Swal.fire({
                     title: 'YOU LOST, WANNA PLAY AGAIN?',
                     showDenyButton: true,
@@ -115,7 +117,7 @@ function game(ltr) {
             console.log("aye its me mario" + cc)
             if (cc === 6) {
                 document.getElementById("background_audio").muted = true;
-
+                
                 won.play();
                 Swal.fire({
                     title: 'YOU WON, WANNA PLAY AGAIN?',
@@ -166,7 +168,6 @@ function Controller(action) {
               }, 800);
             break;
         case "attack":
-            
             document.getElementById("enemy").style.width ="5.4cm"
             document.getElementById("enemy").src="./img/skeleton/Skeleton Attack.gif";
             setTimeout(function() {

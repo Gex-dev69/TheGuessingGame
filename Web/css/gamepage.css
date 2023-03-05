@@ -12,13 +12,11 @@
   font-size: 64px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 40px;
-  height: 100%;
   overflow: hidden;
   width: 100%;
   height: 100vh;
-  display: flex;
 }
 body {
   display: flex;
@@ -35,9 +33,9 @@ body {
   bottom: 10cm;
 }
 .player {
-  position: relative;
-  top: 1cm;
-  height: 50cm;
+  position: absolute;
+  top: 1px;
+  height: 100px;
   font-family: "Rubik One";
   font-style: normal;
   font-weight: 400;
@@ -64,12 +62,14 @@ body {
 }
 
 .cont {
+  align-self: self-end;
+  
   display: flex;
   flex-direction: column;
   width: 409px;
   height: 500px;
-  right: 60px;
-  position: relative;
+  padding-right: 4cm;
+  padding-bottom: 4cm;
   left: 28cm;
   bottom: 4.7cm;
 }
@@ -142,7 +142,8 @@ body {
 .attempts {
   display: grid;
   grid-template-columns: repeat(6, 55px);
-  position: absolute;
+  position: relative;
+  top: 10cm;
   width: 5cm;
   height: 1cm;
   left: 4cm;
@@ -154,11 +155,11 @@ body {
 .hangman{
   display: grid;
   grid-template-columns: repeat(6, 55px);
-  position: absolute;
   width: 10cm;
   height: 4cm;
-  top:19cm;
-  left: 2cm;
+  align-self: self-start;
+  position: absolute;
+  bottom: 1cm;
 }
 
 .BOTS{

@@ -27,6 +27,7 @@ body {
 }
   
 .text_style {
+    position: relative;
     font-family: 'Rubik One';
     font-style: normal;
     font-weight: 400;
@@ -37,7 +38,7 @@ body {
     padding-top: 1cm;
     display: flex;
     align-items: center;
-    margin-left: 44cm;
+
     color: #614930;
     text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.51);
 }

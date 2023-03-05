@@ -203,11 +203,14 @@ input[type="text"] {
   border: none;
 }
 .info{
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  left: 45cm;
-  top: 1.7cm;
+  height: 400px;
+  right: 0.5cm;
+  top: 1.8cm;
   height: 80px;
-  width: 14px;
+  scale: 5px;
   background-color: transparent;
   border: none;
 }
@@ -223,5 +226,5 @@ input[type="text"] {
 }
 .info_text{
   align-self: center;
-  padding-left: 15px;
+
 }
