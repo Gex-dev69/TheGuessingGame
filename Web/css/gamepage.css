@@ -151,3 +151,39 @@ body {
 .heartimg{
   width: 2cm;
 }
+.hangman{
+  display: grid;
+  grid-template-columns: repeat(6, 55px);
+  position: absolute;
+  width: 10cm;
+  height: 4cm;
+  top:19cm;
+  left: 2cm;
+}
+
+.BOTS{
+  overflow: hidden;
+  width: 3cm;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 120px;
+}
+
+.PLY{
+  overflow: hidden;
+  overflow-y: hidden;
+  width: 3cm;
+  margin-top: 34px;
+  margin-left: 150px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.sd {
+  position: absolute;
+  left: 45cm;
+  top: 1cm;
+  height: 80px;
+  scale: 5px;
+  background-color: transparent;
+  border: none;
+}

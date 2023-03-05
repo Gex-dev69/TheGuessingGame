@@ -4,10 +4,11 @@
     <div class="header">
         <h2>GUESS TO LIVE</h2>
         <button class="sd">
-          <img src="./img/playBtn.png" alt="look" class="sound_ico"></img>
-        </button>
+          <img id="playsound" src="./img/playBtn.png" alt="look" class="sound_ico" onclick="sound()"></img>
+        </button>   
         <button class="info" onclick="manual()">
           <img src="./img/infoico.png" alt="look" class="info_img"></img>
+          <text class="info_text">MANUAL</text>
         </button>
         <input
           type="text"
@@ -24,6 +25,9 @@
           <img class="skel" src="./img/flip_skel.gif" />
         </div>
       </div>
+      <audio id="background_audio" src="./sound/Chillstep_2.wav" autoplay loop> 
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+      </audio>
 </html>
 <script src="./javascript/index.js"></script>
 <script src="./javascript/charsel.js"></script>

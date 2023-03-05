@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="./css/charsel.css">
 <html>
+  <audio id="background_audio" src="./sound/Chillstep_2.wav" autoplay loop> 
+    <p>If you are reading this, it is because your browser does not support the audio element.</p>
+  </audio>
     <div class="ChatHistory">
         <text class="text_style" id="myPlayer">PLAYER</text>
         <h2>SELECT CHARACTER</h2>
         <div class="chatBody">
           <div class="con">
-            <button class="selbtn">
+            <button class="selbtn" >
               <div >
-              <img  class="tempo1" draggable="false" src="./img/fontys.gif" onclick="characterSelecter(this)"/>
+              <img  class="tempo1" draggable="false" src="./img/fontys.gif" onclick="warner()"/>
               </div>
             </button>
-            <button class="selbtn">
+            <button class="hols">
               <div>
-              <img class="tempo2"  draggable="false" src="./img/idle.gif"/>
+              <img class="tempo2"  draggable="false" src="./img/idle.gif" onclick="characterSelecter(this)"/>
               </div>
             </button>
             <button class="selbtn">
               <div >
-                <img class="tempo3" draggable="false" src="./img/idle2.gif"/>
+                <img class="tempo3" draggable="false" src="./img/idle2.gif" onclick="warner()"/>
               </div>
             </button>
             <button class="selbtn">
               <div >
-              <img class="tempo4" draggable="false" src="./img/__Idle.gif"/>
+              <img class="tempo4" draggable="false" src="./img/__Idle.gif" onclick="warner()"/>
               </div>
             </button>
           </div>
         </div>
       </div>
+      
 </html>
 <script src="./javascript/index.js"></script>
 <script src="./javascript/charsel.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css
+" rel="stylesheet">

@@ -114,3 +114,17 @@ body {
     justify-content: space-between;
     padding-top: 150px;
 }
+.selbtn{
+    background-image: url("https://cdn.wallpapersafari.com/86/80/xqeCoL.jpg");
+}
+.hols {
+    /* Auto layout */
+     box-sizing: border-box;
+     width: 4cm;
+     height: 4cm;
+     background: #d9d9d9;
+     border: 5px solid #315f37;
+     box-shadow: -5px 5px 6px rgba(92, 109, 135, 0.5), inset -9px 10px 17px rgba(0, 0, 0, 0.85);
+     border-radius: 20px;
+     overflow: hidden;
+ }
