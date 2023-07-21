@@ -1,5 +1,5 @@
 # TheGuessingGame
 
-Simple Web Game. (School Based)
+Simple Web app Game. Hangman clone
 
 ![](image.png)
